@@ -279,7 +279,8 @@ a.logo-link {
   width: 370px;
   background: #ffffff;
 }
-.products-item:hover {
+.products-item:hover,
+.products-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -297,9 +298,20 @@ a.logo-link {
   margin-top: 4px;
   width: 322px;
   height: 30px;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+
+  color: var(--main-text-color);
 }
 
 /* =======Features======= */
+.container-icon {
+  margin-bottom: 30px;
+}
 
 .list-icon {
   display: flex;
@@ -307,7 +319,7 @@ a.logo-link {
   justify-content: center;
   margin-bottom: 30px;
 }
-.item-icon {
+.link-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -388,11 +400,12 @@ a.logo-link {
   display: flex;
   align-items: center;
 }
-.team-link-icon:not(:last-child) {
+.team-item-icon:not(:last-child) {
   margin-right: 10px;
 }
 
 .team-link-icon {
+  display: block;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
@@ -418,6 +431,10 @@ a.logo-link {
 .team-link-icon:hover > .team-icon,
 .team-link-icon:focus > .team-icon {
   fill: #ffffff;
+}
+focus:focus {
+  fill: #ffffff;
+  background-color: var(--accent-color);
 }
 
 .section-team {
@@ -482,23 +499,28 @@ a.logo-link {
 .customers-item:not(:last-child) {
   margin-right: 30px;
 }
-.customers-item:hover,
-.customers-item:focus {
+.customers-link:hover,
+.customers-link:focus {
   border: 1px solid var(--accent-color);
 }
 .customers-link:hover > .customers-icon,
 .customers-link:focus > .customers-icon {
   fill: var(--accent-color);
 }
-.customers-item {
+.customers-link {
+  width: 170px;
+  height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+}
+.customers-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .customers-icon {
   fill: #afb1b8;
-  width: 170px;
-  height: 92px;
 }
 
 /* =======End Customers======= */
@@ -580,14 +602,15 @@ a .adress-list {
 
 .footer-icons {
   margin-left: 70px;
+  width: 20px;
+  height: 20px;
 }
-.footer-item-icon {
+.footer-link-icon {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
-  width: 44px;
-  height: 44px;
+
   border-radius: 50%;
 }
 .footer-item-icon:not(:last-child) {
@@ -598,12 +621,13 @@ a .adress-list {
 }
 .footer-link-icon {
   fill: #ffffff;
-  width: 20px;
-  height: 20px;
+
+  width: 44px;
+  height: 44px;
 }
 
-.footer-item-icon:hover,
-.footer-item-icon:focus {
+.footer-link-icon:hover,
+.footer-link-icon:focus {
   background-color: var(--accent-color);
 }
 
