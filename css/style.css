@@ -93,10 +93,6 @@ body {
 .menu-item:not(:last-child) {
   margin-right: 50px;
 }
-.menu-link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
 
 a.logo-link {
   font-family: var(--secondary-font);
@@ -112,10 +108,9 @@ a.logo-link {
   color: var(--accent-color);
 }
 
-.menu .link.current {
-  color: var(--accent-color);
-}
 .menu-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-family: var(--main-font);
   font-family: Roboto;
   font-weight: 500;
@@ -123,9 +118,18 @@ a.logo-link {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .menu-link:hover,
 .menu-link:focus {
+  color: var(--accent-color);
+}
+
+.menu .link.current {
   color: var(--accent-color);
 }
 
@@ -139,6 +143,10 @@ a.logo-link {
   letter-spacing: 0.02em;
   color: var(--main-text-color);
   margin-right: 50px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .office-link:hover,
 .office-link:focus {
@@ -153,6 +161,10 @@ a.logo-link {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .tel-link:hover,
 .tel-link:focus {
@@ -195,7 +207,6 @@ a.logo-link {
 .button.service {
   padding: 10px 32px;
   align-items: center;
-
   font-family: var(--main-font);
   font-weight: 700;
   font-size: 16px;
@@ -222,6 +233,10 @@ a.logo-link {
   border-radius: 4px;
   cursor: pointer;
   color: var(--title-text-color);
+
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-button:hover,
 .nav-button:focus {
@@ -279,8 +294,16 @@ a.logo-link {
   width: 370px;
   background: #ffffff;
 }
-.products-item:hover,
-.products-item:focus {
+
+.products-link {
+  display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.products-link:hover,
+.products-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -309,6 +332,7 @@ a.logo-link {
 }
 
 /* =======Features======= */
+
 .container-icon {
   margin-bottom: 30px;
 }
@@ -379,8 +403,30 @@ a.logo-link {
 }
 
 .work-item {
+  position: relative;
   margin-left: 30px;
   margin-top: 30px;
+}
+
+.work-text {
+  position: absolute;
+  bottom: 0;
+  padding-left: auto;
+  padding-right: auto;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 370px;
+  height: 70px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background: rgba(47, 48, 58, 0.8);
 }
 
 /* =======End Work======= */
@@ -405,22 +451,21 @@ a.logo-link {
 }
 
 .team-link-icon {
-  display: block;
+  display: flex;
   align-items: center;
+  cursor: pointer;
   justify-content: center;
   border-radius: 50%;
   width: 44px;
   height: 44px;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-link-icon:hover,
 .team-link-icon:focus {
   background-color: var(--accent-color);
-}
-
-.team-link-icon {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
 }
 
 .team-icon {
@@ -428,10 +473,15 @@ a.logo-link {
   justify-content: center;
   fill: #afb1b8;
 }
+
 .team-link-icon:hover > .team-icon,
 .team-link-icon:focus > .team-icon {
   fill: #ffffff;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 focus:focus {
   fill: #ffffff;
   background-color: var(--accent-color);
@@ -448,6 +498,7 @@ focus:focus {
   margin-left: -30px;
   margin-top: -30px;
 }
+
 .team-item {
   flex-basis: calc((100% - 120px) / 4);
   margin-left: 30px;
@@ -517,10 +568,18 @@ focus:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon {
   fill: #afb1b8;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* =======End Customers======= */
@@ -554,6 +613,10 @@ a .adress-list {
   font-size: 14px;
   line-height: 1.7;
   color: #ffffff;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-link.link.footer {
   color: #ffffff;
@@ -564,6 +627,10 @@ a .adress-list {
   width: 231px;
   height: 21px;
   color: rgba(255, 255, 255, 0.6);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-link:focus,
@@ -610,8 +677,11 @@ a .adress-list {
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
-
   border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-item-icon:not(:last-child) {
   margin-right: 10px;
