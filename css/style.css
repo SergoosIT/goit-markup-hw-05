@@ -2,6 +2,7 @@
   --main-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
+  --white-color: #ffffff;
   --main-font: Roboto, sans-serif;
   --secondary-font: Raleway, sans-serif;
 }
@@ -216,7 +217,7 @@ a.logo-link {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 .button.service {
@@ -227,7 +228,7 @@ a.logo-link {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  color: #ffffff;
+  color: var(--white-color);
   cursor: pointer;
   background: var(--accent-color);
   border: 1px solid var(--accent-color);
@@ -255,7 +256,7 @@ a.logo-link {
 }
 .nav-button:hover,
 .nav-button:focus {
-  color: #ffffff;
+  color: var(--white-color);
   background: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -274,7 +275,7 @@ a.logo-link {
 
 .list .nav-button.current {
   background-color: var(--accent-color);
-  color: #ffffff;
+  color: var(--white-color);
 }
 .hero-portfolio {
   padding-top: 94px;
@@ -307,11 +308,12 @@ a.logo-link {
   margin-left: 30px;
   margin-top: 30px;
   width: 370px;
-  background: #ffffff;
+  background: var(--white-color);
 }
 
 .products-link {
   display: block;
+
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -338,12 +340,43 @@ a.logo-link {
   height: 30px;
   font-family: var(--main-font);
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-
   color: var(--main-text-color);
+}
+.portfolio-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  overflow: auto;
+  padding: 63px 24px;
+
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+
+  transform: translateY(200%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.products-link:hover .overlay,
+.products-link:focus .overlay {
+  transform: translateY(0%);
 }
 
 /* =======Features======= */
@@ -436,7 +469,7 @@ a.logo-link {
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--white-color);
   width: 370px;
   height: 70px;
   padding-top: 27px;
@@ -491,14 +524,14 @@ a.logo-link {
 
 .team-link-icon:hover > .team-icon,
 .team-link-icon:focus > .team-icon {
-  fill: #ffffff;
+  fill: var(--white-color);
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 focus:focus {
-  fill: #ffffff;
+  fill: var(--white-color);
   background-color: var(--accent-color);
 }
 
@@ -519,7 +552,7 @@ focus:focus {
   margin-left: 30px;
   margin-top: 30px;
   width: 270px;
-  background: #ffffff;
+  background: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -627,14 +660,14 @@ a .adress-list {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
-  color: #ffffff;
+  color: var(--white-color);
 
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-link.link.footer {
-  color: #ffffff;
+  color: var(--white-color);
   margin-bottom: 20px;
   padding: 0px;
 }
@@ -679,7 +712,7 @@ a .adress-list {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 .footer-icons {
@@ -705,7 +738,7 @@ a .adress-list {
   display: flex;
 }
 .footer-link-icon {
-  fill: #ffffff;
+  fill: var(--white-color);
 
   width: 44px;
   height: 44px;
