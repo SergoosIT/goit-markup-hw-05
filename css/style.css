@@ -119,9 +119,7 @@ a.logo-link {
   letter-spacing: 0.02em;
   color: var(--title-text-color);
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link:hover,
@@ -147,6 +145,7 @@ a.logo-link {
   background-color: var(--accent-color);
   border-radius: 2px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .office-link {
@@ -160,10 +159,9 @@ a.logo-link {
   color: var(--main-text-color);
   margin-right: 50px;
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .office-link:hover,
 .office-link:focus {
   color: var(--accent-color);
@@ -178,10 +176,9 @@ a.logo-link {
   letter-spacing: 0.02em;
   color: var(--main-text-color);
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .tel-link:hover,
 .tel-link:focus {
   color: var(--accent-color);
@@ -250,10 +247,9 @@ a.logo-link {
   cursor: pointer;
   color: var(--title-text-color);
 
-  transition-property: color, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .nav-button:hover,
 .nav-button:focus {
   color: var(--white-color);
@@ -314,9 +310,7 @@ a.logo-link {
 .products-link {
   display: block;
 
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .products-link:hover,
@@ -507,9 +501,7 @@ a.logo-link {
   width: 44px;
   height: 44px;
 
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-link-icon:hover,
 .team-link-icon:focus {
@@ -525,9 +517,7 @@ a.logo-link {
 .team-link-icon:hover > .team-icon,
 .team-link-icon:focus > .team-icon {
   fill: var(--white-color);
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 focus:focus {
@@ -617,17 +607,13 @@ focus:focus {
   align-items: center;
   justify-content: center;
 
-  transition-property: border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon {
   fill: #afb1b8;
 
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* =======End Customers======= */
@@ -662,9 +648,7 @@ a .adress-list {
   line-height: 1.7;
   color: var(--white-color);
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-link.link.footer {
   color: var(--white-color);
@@ -676,9 +660,7 @@ a .adress-list {
   height: 21px;
   color: rgba(255, 255, 255, 0.6);
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-link:focus,
@@ -727,9 +709,7 @@ a .adress-list {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-item-icon:not(:last-child) {
   margin-right: 10px;
@@ -750,3 +730,45 @@ a .adress-list {
 }
 
 /* =======End Footer======= */
+
+/* =======Model window======= */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vw;
+  background-color: rgb(0, 0, 0, 0.2);
+
+  transition: opacity 3250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
+  background-color: var(--white-color);
+  transform: translate(-50%, -50%);
+}
+
+.close-button {
+  position: absolute;
+  padding: 0px;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

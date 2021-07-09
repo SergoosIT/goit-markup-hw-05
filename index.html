@@ -15,6 +15,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>WebStudio</title>
   </head>
@@ -67,7 +71,7 @@
       <section class="hero">
         <div class="container hero-main">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="button service" type="button">Заказать услугу</button>
+          <button class="button service" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -518,5 +522,16 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-button" type="button" data-modal-close>
+          <svg class="" width="11px" height="11px">
+            <use href= ./images/icon/x.svg#x></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
